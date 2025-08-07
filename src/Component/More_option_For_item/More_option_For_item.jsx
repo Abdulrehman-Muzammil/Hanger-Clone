@@ -17,9 +17,9 @@ const More_option_For_item = ({removeModal,setRemoveModal,category ,images,id,ti
  
   return (
   <>
-  <div className={`bg-[#00000096] w-[100%] h-[100%] fixed ${removeModal === false ? 'hidden' :'flex' } top-0 right-0  justify-center  pb-[3%] items-center flex-col z-[10000] overflow-hidden duration-300 `}>
+  <div className={`bg-[#00000096] w-[100%] h-[100%] fixed ${removeModal === false ? 'hidden' :'flex' } top-0 right-0  justify-center p-[10px] pb-[3%] items-center flex-col z-[10000] overflow-hidden duration-300 `}>
 
-    <div className="flex flex-col md:flex-row  overflow-hidden  sm:h-[60vh] md:h-[50vh] m-auto lg:h-[90vh] bg-white rounded-[20px]">
+    <div className="flex flex-col md:flex-row  overflow-hidden max-w-[400px]  sm:h-[60vh] md:h-[50vh] m-auto lg:h-[90vh] bg-white rounded-[20px]">
       {/* Left Side - Images */}
       <div className="md:w-1/2 max-w-[800px] h-[50vh] lg:h-full flex items-center  overflow-hidden justify-center bg-[#f4f4f4] relative">
         <div className='flex flex-nowrap gap-0 w-[100%] h-[100%]  '  style={{ transform: `translateX(-${productImageIdx * 100}%)` }}>
@@ -46,7 +46,7 @@ const More_option_For_item = ({removeModal,setRemoveModal,category ,images,id,ti
       {/* Right Side - Details */}
       <div className="relative md:w-1/2 w-full h-[50vh] lg:h-full flex flex-col justify-between  overflow-hidden">
         {/* Scrollable Content */}
-        <div className="overflow-y-auto p-5  gap-[20px] flex flex-col justify-between scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300" style={{ maxHeight: 'calc(100vh - 60px)' }}>
+        <div className="overflow-y-auto p-5 w-[100%] overflow-x-hidden gap-[20px] flex flex-col justify-between scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-300" style={{ maxHeight: 'calc(100vh - 60px)' }}>
           {/* Close button */}
           <div className='absolute top-4 right-4'>
             <div className='bg-white p-4 rounded-full shadow-lg cursor-pointer hover:rotate-45 transition duration-300'>
@@ -73,9 +73,9 @@ const More_option_For_item = ({removeModal,setRemoveModal,category ,images,id,ti
           {/* Sizes */}
             {category == 'beauty' || category =='fragrances' || category=='furniture' ? 
             (
-                 <div className='mt-6'>
+                 <div className='mt-6 w-[100%] '>
             <p className='text-sm font-medium mb-2'>Size: <span className="font-normal">{productSize}</span></p>
-            <div className='flex gap-3'>
+            <div className='flex gap-3 flex-wrap'>
               {['Small','Medium','Large','X-Large','XX-Large'].map((size, i) => (
                 <button
                   key={i}

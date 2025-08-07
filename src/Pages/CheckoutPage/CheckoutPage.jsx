@@ -32,8 +32,8 @@ const TotalPrice=Item.reduce((accum,{price,quantity})=> {
       ) : ( 
   <div className="mt-[13vh] w-[99vw]  overflow-x-hidden bg-white grid grid-flow-rows  md:grid-cols-2 grid-cols-1  gap-10">
         {/* Left Side - Form */}
-      <div className="py-[30px] px-[20px] flex justify-end w-[100%] "> 
-          <div className="w-[50%] ">
+      <div className="py-[30px]  px-[20px] flex justify-end w-[100%] "> 
+          <div className="w-[100%] xl:w-[50%] ">
           <h2 className="text-xl font-semibold mb-4">Contact</h2>
           <input type="email" placeholder="Email" className="w-full border p-2 mb-3 rounded  border-gray-300 text-[14px] " />
           <label className="block mb-3  text-[14px] text-[#2b2a2a]">
@@ -93,8 +93,8 @@ const TotalPrice=Item.reduce((accum,{price,quantity})=> {
       </div>
 
         {/* Right Side - Summary */}
-        <div className=" border-l border-gray-300  flex justify-content-start  py-[30px] px-[20px] bg-[#F5F5F5]">
-         <div className="w-[50%]">
+        <div className=" border-l border-gray-300  w-[100%] flex justify-content-start  py-[30px] px-[20px] bg-[#F5F5F5]">
+         <div className="w-[100%] xl:w-[50%]">
           {Item?.map((Item,idx)=>{
             return (  <div key={idx} className="flex items-center gap-4 mb-6">
 
