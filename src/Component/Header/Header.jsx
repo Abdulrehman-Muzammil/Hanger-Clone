@@ -93,14 +93,17 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-
+{/* ICONS  */}
       <div className="w-[30%]   flex justify-end align-middle gap-[10px] text-[25px] cursor-pointer font-extrabold sm:pr-[10px] lg:pr-[30px]">
         <CiSearch className=" hover:animate-bounce duration-[2000]" />
         <Link to={`/cart`} className="relative">
         <CiShoppingCart className=" hover:animate-bounce duration-[2000]" />
         <p className="absolute top-[-12px] right-[-5px]  text-[15px]">{CartList.length }</p>
         </Link>
+        <Link to={'/login'}>
         <FaRegUser className=" hover:animate-bounce duration-[2000]" />
+        
+        </Link>
       </div>
 
     </header>

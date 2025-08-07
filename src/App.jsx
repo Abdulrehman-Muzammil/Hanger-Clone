@@ -9,6 +9,8 @@ import ScrollToTop from './ScrollToTop.js'
 import Category_Cart from './Component/Category_Cart/Category_Cart.jsx'
 import CategoryPage from './Pages/CategoryPage/CategoryPage.jsx'
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage.jsx'
+import Login from './Pages/Login_SignUp/Login.jsx'
+import SignUp from './Pages/Login_SignUp/SignUp.jsx'
 const App = () => {
   return(
 <>
@@ -16,6 +18,8 @@ const App = () => {
  <ScrollToTop />
 <Routes>
   <Route path='/' element={<Home></Home>}></Route>
+  <Route path='/login' element={<Login></Login>}></Route>
+  <Route path='/signup' element={<SignUp></SignUp>}></Route>
   <Route path='/products' element={<Products></Products>}></Route>
   <Route path='/category' element={<CategoryPage></CategoryPage>}></Route>
   <Route path='/cart' element={<Category_Cart></Category_Cart>}></Route>
