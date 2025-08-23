@@ -17,9 +17,9 @@ const More_option_For_item = ({removeModal,setRemoveModal,category ,images,id,ti
  
   return (
   <>
-  <div className={`bg-[#00000096] w-[100%] h-[100%] fixed ${removeModal === false ? 'hidden' :'flex' } top-0 right-0  justify-center p-[10px] pb-[3%] items-center flex-col z-[10000] overflow-hidden duration-300 `}>
+  <div className={`bg-[#00000096] w-[100%] h-[100%] fixed ${removeModal === false ? 'hidden' :'flex' } top-0 right-0  flex align-middle justify-center p-[10px] pb-[3%] items-center flex-col z-[10000] overflow-hidden duration-300 `}>
 
-    <div className="flex flex-col md:flex-row  overflow-hidden max-w-[400px]  sm:h-[60vh] md:h-[50vh] m-auto lg:h-[90vh] bg-white rounded-[20px]">
+    <div className="flex flex-col md:flex-row  overflow-hidden min-w-[400px] md:w-[98%] xl:w-[70%] sm:h-[60vh] md:h-[50vh] m-auto lg:h-[85vh] bg-white rounded-[20px]">
       {/* Left Side - Images */}
       <div className="md:w-1/2 max-w-[800px] h-[50vh] lg:h-full flex items-center  overflow-hidden justify-center bg-[#f4f4f4] relative">
         <div className='flex flex-nowrap gap-0 w-[100%] h-[100%]  '  style={{ transform: `translateX(-${productImageIdx * 100}%)` }}>
@@ -29,7 +29,7 @@ const More_option_For_item = ({removeModal,setRemoveModal,category ,images,id,ti
                 <img
                   src={src}
                   alt={`Slide ${i + 1}`}
-                  className="h-full object-cover w-[100%] object-center"
+                  className="h-full object-contain w-[98%] object-center"
                 />
               </div>
             ))}
